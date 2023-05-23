@@ -1,12 +1,6 @@
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from numpy import *
-def circle(x,y,r,theta1,theta2,mode):
-	glBegin(mode)
-	for i in arange(theta1,theta2,0.01):
-		glVertex2d(x+r*cos(i),y+r*sin(i))
-	glEnd()
-
 
 def draw():
 	glLineWidth(3)
@@ -27,7 +21,6 @@ def draw():
 			p = j / freq + i / (freq *360)
 			q = .6 * cos( pi * i / 180)
 			glVertex2d(p,q)
-			print(p,q)
 	glEnd()
 
 	glFlush()
